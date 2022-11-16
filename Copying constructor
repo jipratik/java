@@ -1,0 +1,29 @@
+//Copying constructor
+import  java.io.*;
+class copyconstructor
+{
+int id;
+String name;
+copyconstructor(int i ,String n)
+{
+id=i;
+name=n;
+}
+copyconstructor(copyconstructor s)
+{
+id=s.id;
+name=s.name;
+}
+void display()
+{
+System.out.println(id);
+System.out.println(name);
+}
+public static void main (String args[])
+{
+copyconstructor s1=new copyconstructor(10,"Vikash");
+copyconstructor s2=new copyconstructor(s1);
+s1.display();
+s2.display();
+}
+}
